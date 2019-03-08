@@ -1,0 +1,23 @@
+kumuluzee:
+  name: java-service
+  version: 1.0.0
+  env:
+    name: dev
+  server:
+    base-url: http://localhost:8080
+  config:
+    start-retry-delay-ms: 500
+    max-retry-delay-ms: 900000
+    consul:
+      hosts: http://localhost:8500
+  discovery:
+    consul:
+      hosts: http://localhost:8500
+    ttl: 20
+    ping-interval: 15
+  datasources:
+    - jndi-name: jdbc/orders_database
+      connection-url: jdbc:postgresql://localhost:5432/orders
+      username: postgres
+      password: postgres
+      max-pool-size: 20

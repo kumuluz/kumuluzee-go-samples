@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.kumuluz.ee.golang.samples.tutorial.java.service</groupId>
+    <artifactId>java-service</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+
+    <modules>
+        <module>api</module>
+        <module>persistence</module>
+        <module>services</module>
+    </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <kumuluzee.version>3.2.0</kumuluzee.version>
+        <postgres.version>42.2.5</postgres.version>
+        <kumuluzee-cors.version>1.0.5</kumuluzee-cors.version>
+        <kumuluzee-config-consul.version>1.1.0</kumuluzee-config-consul.version>
+        <kumuluzee-discovery-consul.version>1.1.0</kumuluzee-discovery-consul.version>
+        <kumuluzee-rest.version>1.2.3</kumuluzee-rest.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- KumuluzEE bom -->
+            <dependency>
+                <groupId>com.kumuluz.ee</groupId>
+                <artifactId>kumuluzee-bom</artifactId>
+                <version>${kumuluzee.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.kumuluz.ee.cors</groupId>
+                <artifactId>kumuluzee-cors</artifactId>
+                <version>${kumuluzee-cors.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kumuluz.ee.config</groupId>
+                <artifactId>kumuluzee-config-consul</artifactId>
+                <version>${kumuluzee-config-consul.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kumuluz.ee.discovery</groupId>
+                <artifactId>kumuluzee-discovery-consul</artifactId>
+                <version>${kumuluzee-discovery-consul.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kumuluz.ee.rest</groupId>
+                <artifactId>kumuluzee-rest-core</artifactId>
+                <version>${kumuluzee-rest.version}</version>
+            </dependency>
+            <!-- external -->
+            <dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>${postgres.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+</project>

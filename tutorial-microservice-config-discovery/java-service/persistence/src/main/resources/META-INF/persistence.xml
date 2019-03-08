@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.2">
+    <persistence-unit name="db-jpa-unit" transaction-type="JTA">
+
+        <jta-data-source>jdbc/orders_database</jta-data-source>
+
+        <class>com.kumuluz.ee.golang.samples.tutorial.java.service.persistence.models.Order</class>
+
+        <properties>
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <property name="javax.persistence.schema-generation.create-source" value="metadata"/>
+            <property name="javax.persistence.sql-load-script-source" value="sql-scripts/init-db.sql"/>
+            <property name="javax.persistence.schema-generation.drop-source" value="metadata"/>
+        </properties>
+    </persistence-unit>
+</persistence>

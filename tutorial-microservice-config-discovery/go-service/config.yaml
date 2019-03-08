@@ -1,0 +1,16 @@
+kumuluzee:
+  name: go-service
+  server:
+    base-url: http://localhost:9000
+    http:
+      port: 9000
+  env:
+    name: dev
+  discovery:
+    consul:
+      hosts: http://localhost:8500
+  config:
+    consul:
+      hosts: http://localhost:8500
+rest-config:
+  maintenance: false

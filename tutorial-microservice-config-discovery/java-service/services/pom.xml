@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>java-service</artifactId>
+        <groupId>com.kumuluz.ee.golang.samples.tutorial.java.service</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>services</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.kumuluz.ee</groupId>
+            <artifactId>kumuluzee-jta-narayana</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kumuluz.ee</groupId>
+            <artifactId>kumuluzee-cdi-weld</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kumuluz.ee.golang.samples.tutorial.java.service</groupId>
+            <artifactId>persistence</artifactId>
+            <version>${parent.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>

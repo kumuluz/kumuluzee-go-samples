@@ -1,0 +1,18 @@
+kumuluzee:
+  # name of our service
+  name: test-service
+  server:
+    # url where our service will live
+    base-url: http://localhost:9000
+    http:
+      port: 9000
+  env: 
+    name: dev
+  # specify hosts for discovery register
+  discovery:
+    consul:
+      hosts: http://localhost:8500
+  # specify hosts for remote configuration
+  config:
+    consul:
+      hosts: http://localhost:8500
