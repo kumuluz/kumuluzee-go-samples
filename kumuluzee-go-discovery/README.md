@@ -46,7 +46,7 @@ go run main.go
 ```
   
 After sample is run, it can be accessed by navigating to the following URL:
-* http://localhost:9000/
+* http://localhost:9000/lookup
 
 To shut down the example simply stop the processes in the foreground.
 
