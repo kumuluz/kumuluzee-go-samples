@@ -322,7 +322,8 @@ kumuluzee:
       connection-url: jdbc:postgresql://localhost:5432/orders
       username: postgres
       password: postgres
-      max-pool-size: 20
+      pool:
+        max-size: 20
 ```
 
 #### OrderApplication
